@@ -1,3 +1,10 @@
+## Building Netflix from Scratch Using React and Firebase 
+This project was made by following tutorial by Karl Hadwen on [Youtube](https://www.youtube.com/watch?v=x_EEwGe-a9o)
+
+This Netflix clone application was built using React with Firebase for the backend. There are 4 pages total within this application: sign in, sign up, browse & lastly the homepage. Some pages are using protected routes with auth listeners. Firebase handles all the data and that data is retrieved using a custom hook; authentication is used on all pages, which is handled by Firebase as well.
+
+![Preview](netflix-preview.png?raw=true)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
