@@ -45,19 +45,12 @@ Header.Logo = function HeaderLogo({ to, ...restProps }) {
   );
 };
 
-Header.Search = function HeaderSearch({
-  searchTerm,
-  setSearchTerm,
-  ...restProps
-}) {
+Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
   const [searchActive, setSearchActive] = useState(false);
 
   return (
     <Search {...restProps}>
-      <SearchIcon
-        onClick={() => setSearchActive((searchActive) => !searchActive)}
-        data-testid="search-click"
-      >
+      <SearchIcon onClick={() => setSearchActive(!searchActive)} data-testid="search-click">
         <img src="/images/icons/search.png" alt="Search" />
       </SearchIcon>
       <SearchInput
@@ -76,7 +69,7 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
 };
 
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
-  return <Feature>{children}</Feature>;
+  return <Feature {...restProps}>{children}</Feature>;
 };
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {
@@ -95,10 +88,7 @@ Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
   return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
-Header.FeatureCallOut = function HeaderFeatureCallOut({
-  children,
-  ...restProps
-}) {
+Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
   return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>;
 };
 
